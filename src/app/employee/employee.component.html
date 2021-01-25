@@ -1,0 +1,51 @@
+<main class="bg-light">
+
+    <div class="page-hero-section bg-image hero-mini" style="background-image: url(../assets/img/hero_mini.svg);">
+      <div class="hero-caption">
+        <div class="container fg-white h-100">
+          <div class="row justify-content-center align-items-center text-center h-100">
+            <div class="col-lg-6">
+              <h3 class="mb-4 fw-medium">Employee</h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-dark justify-content-center bg-transparent">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Teams</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="page-section pt-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card-page mt-3">
+              <h5 class="fg-primary">Meet Our Teams</h5>
+              <hr>
+    
+              <div class="row justify-content-center" >
+                <div class="col-lg-3 py-3" *ngFor="let employee of datas.data; let i = index">
+                    <div class="team-item" (click)="getId(i)">
+                        <div class="team-avatar">
+                          <img src={{employee.avatar}} alt="">
+                        </div>
+                        <h6 class="team-name">{{employee.first_name}} {{employee.last_name}}</h6>
+                        
+                        <!-- <span class="fg-gray fs-small">{{employee.first_name}} {{employee.last_name}}</span> -->
+                        <!-- <span class="fg-gray fs-small">Creative Director</span> -->
+                      </div>
+                </div>
+              </div>
+              
+              <span class="col-lg-12 btn btn-gradient rounded-pill" (click)="seeMore()">More</span> 
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </main>
