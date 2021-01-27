@@ -13,6 +13,8 @@ import { BlogComponent } from './blog/blog.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { FormLoginComponent } from './form-login/form-login.component';
+import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
     BlogComponent,
     BlogDetailsComponent,
     EmployeeComponent,
-    EmployeeDetailComponent
+    EmployeeDetailComponent,
+    FormLoginComponent,
+    EmployeeUpdateComponent
   ],
   imports: [
     BrowserModule,

@@ -25,11 +25,15 @@
           <a class="nav-link" routerLink="/employee" routerLinkActive="active">Employee</a>
         </li>
         <li class="nav-item dropdown active">
-          <a class="nav-link dropdown-toggle" routerLink="/" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+          <a class="nav-link dropdown-toggle" routerLink="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" routerLink="/" >Setting</a>
-            <a class="dropdown-item " routerLink="/" >Login</a>
-            <a class="dropdown-item " routerLink="/" >Register</a>
+            <li class="dropdown-item">SignIn/Login</li>
+            <li class="dropdown-item" (click)="linkPage()">SignOut/Register</li>
+            <li class="dropdown-item">Logout</li>
+
+            <!-- <a class="dropdown-item" routerLink="/" >Setting</a>
+            <a class="dropdown-item " routerLink="/formLogin" >SignIn/Login</a>
+            <a class="dropdown-item " routerLink="/" >SignOut/Register</a> -->
           </div>
         </li>
       </ul>

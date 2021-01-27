@@ -9,7 +9,7 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb breadcrumb-dark justify-content-center bg-transparent">
                   <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Lists</li>
+                  <!-- <li class="breadcrumb-item active" aria-current="page">Lists</li> -->
                 </ol>
               </nav>
             </div>
@@ -29,7 +29,7 @@
                     <p class="fg-primary fw-medium fs-vlarge">{{ message }}</p>
                 </div>
 
-                <div class="col-md-12 text-center py-3 py-md-2" *ngIf="employeeDetail && employeeDetail.data">
+                <div class="col-md-12 text-center py-3 py-md-2" *ngIf="employeeDetail && employeeDetail.data" (click)="linkPage(employeeDetail.data.id)">
                   <div  class="team-avatar" >
                     <img [src]=employeeDetail.data.avatar alt="">
                   </div>

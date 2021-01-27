@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-// import { Location } from '@angular/common';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,12 +10,8 @@ export class AppComponent {
 
   public href: string = "";
 
-  constructor(private router : Router) {}
+  constructor() {}
 
   ngOnInit() {
-    console.log(window.location.pathname)
-      this.href = window.location.pathname;
-      console.log(this.href)
-      console.log(this.router.url);
   }
 }

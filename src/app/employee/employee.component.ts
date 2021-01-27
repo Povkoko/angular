@@ -13,6 +13,8 @@ export class EmployeeComponent implements OnInit {
   private baseURL = 'https://reqres.in/api/users';
   page:any = 1;
 
+  isShow = false;
+
   constructor(
     private http: HttpClient,
     private _Router:Router
@@ -44,6 +46,15 @@ export class EmployeeComponent implements OnInit {
       this.page--;
       return this.getData();
     };
+  }
+
+  btnCreate(){
+    if(this.isShow){
+      this.isShow = false
+    }else{
+      this.isShow = true
+    }
+
   }
 
 }

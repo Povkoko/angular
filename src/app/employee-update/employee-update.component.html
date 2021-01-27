@@ -1,0 +1,67 @@
+<main class="bg-light">
+
+    <div class="page-hero-section bg-image hero-mini" style="background-image: url(../assets/img/hero_mini.svg);">
+      <div class="hero-caption">
+        <div class="container fg-white h-100">
+          <div class="row justify-content-center align-items-center text-center h-100">
+            <div class="col-lg-6">
+              <h3 class="mb-4 fw-medium">Employee</h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-dark justify-content-center bg-transparent">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item" style="cursor: pointer;">update</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="page-section pt-5">
+      <div class="container">
+        <div class="row justify-content-center">
+
+          <div class="col-md-6 col-lg-5 my-3 wow fadeInUp" *ngIf="obj && obj.data">
+            <div class="card-page">
+              <h3 class="fw-normal">Update Information</h3>
+              <form class="mt-3">
+
+                <div  class="team-avatar" >
+                    <img [src]=obj.data.avatar alt="">
+                </div>
+
+                <div class="form-group">
+                  <label for="name" class="fw-medium fg-grey">First Name</label>
+                  <input type="text" class="form-control" id="fname" [(ngModel)]="obj.data.first_name" >
+                  {{obj.first_name}}
+                </div>
+
+                <div class="form-group">
+                    <label for="name" class="fw-medium fg-grey">Last Name</label>
+                    <input type="text" class="form-control" id="lname" [(ngModel)]="obj.last_name" >
+                  </div>
+      
+                <div class="form-group">
+                  <label for="email" class="fw-medium fg-grey">Email</label>
+                  <input type="text" class="form-control" id="email" [(ngModel)]="obj.email">
+                </div>
+                <p>*Your information will never be Update with any third party.</p>
+      
+                <div class="form-group mt-4">
+                  <button type="submit" class="btn btn-primary" (click)="doUpdate(obj.data.id)">Update</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+    
+    </main>

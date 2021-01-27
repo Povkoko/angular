@@ -9,7 +9,8 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb breadcrumb-dark justify-content-center bg-transparent">
                   <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Teams</li>
+                  <li class="breadcrumb-item" style="cursor: pointer;" (click)="btnCreate()" *ngIf="isShow">List</li>
+                  <li class="breadcrumb-item" style="cursor: pointer;" (click)="btnCreate()" *ngIf="!isShow">Create</li>
                 </ol>
               </nav>
             </div>
@@ -21,11 +22,13 @@
     <div class="page-section pt-5">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-8">
+
+
+
+          <div class="col-lg-8 my-3 wow fadeInUp" *ngIf="!isShow">
             <div class="card-page mt-3">
               <h5 class="fg-primary">Meet Our Teams</h5>
               <hr>
-    
               <div class="row justify-content-center" >
                 <div class="col-lg-3 py-3" *ngFor="let employee of datas.data; let i = index">
                     <div class="team-item" (click)="getId(i)">
@@ -33,9 +36,6 @@
                           <img src={{employee.avatar}} alt="">
                         </div>
                         <h6 class="team-name">{{employee.first_name}} {{employee.last_name}}</h6>
-                        
-                        <!-- <span class="fg-gray fs-small">{{employee.first_name}} {{employee.last_name}}</span> -->
-                        <!-- <span class="fg-gray fs-small">Creative Director</span> -->
                       </div>
                 </div>
               </div>
@@ -44,8 +44,39 @@
 
             </div>
           </div>
+
+
+    
+          <div class="col-md-6 col-lg-5 my-3 wow fadeInUp" *ngIf="isShow">
+            <div class="card-page">
+              <h3 class="fw-normal">Create Employee</h3>
+              <form method="POST" class="mt-3">
+                <div class="form-group">
+                  <label for="name" class="fw-medium fg-grey">Fullname</label>
+                  <input type="text" class="form-control" id="name">
+                </div>
+      
+                <div class="form-group">
+                  <label for="email" class="fw-medium fg-grey">Email</label>
+                  <input type="text" class="form-control" id="email">
+                </div>
+      
+                <p>*Your information will never be shared with any third party.</p>
+      
+                <div class="form-group mt-4">
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+
+
         </div>
       </div>
     </div>
+
+
     
     </main>

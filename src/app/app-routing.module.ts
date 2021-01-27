@@ -5,7 +5,9 @@ import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { FormLoginComponent } from './form-login/form-login.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
@@ -15,7 +17,9 @@ const routes: Routes = [
   { path: 'blog', component: BlogComponent },
   { path: 'blogDetails', component: BlogDetailsComponent },
   { path: 'employee', component:EmployeeComponent },
-  { path: 'employeeDetails/:id', component:EmployeeDetailComponent }
+  { path: 'employeeDetails/:id', component:EmployeeDetailComponent },
+  { path: 'formLogin', component: FormLoginComponent },
+  { path: 'employeeUpdate/:id', component:EmployeeUpdateComponent }
 ];
 
 @NgModule({
